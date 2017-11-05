@@ -1,0 +1,19 @@
+﻿<h1>Pazienti</h1>
+<p>This component demonstrates fetching data from the server.</p>
+<p *ngIf="!pazienti"><em>Loading...</em></p>
+<table class='table' *ngIf="pazienti">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Cognome</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of pazienti">
+            <td>{{ p.id }}</td>
+            <td>{{ p.nome }}</td>
+            <td>{{ p.cognome }}</td>
+        </tr>
+    </tbody>
+</table>
